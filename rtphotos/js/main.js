@@ -1,7 +1,7 @@
 var pusher,
     channel,
     apiToken = 'da04f5af68a3ed9b77d1',
-    photoAPI = '',
+    photoAPI = 'http://80cf5e8f.ngrok.io',
     // photoAPI = '',
 
 // Pusher connection
@@ -22,7 +22,8 @@ function renderPhoto(photoObject) {
   div.classList.add('col-sm-3')
 
   var img = document.createElement('img')
-  img.setAttribute('src', photoObject.photo)
+  img.classList.add('img-thumbnail')
+  img.setAttribute('src', photoAPI + photoObject.image_url)
   div.appendChild(img)
 
   var caption = document.createElement('h4')
@@ -31,30 +32,29 @@ function renderPhoto(photoObject) {
   div.appendChild(caption)
 
   photos.appendChild(div)
-
 }
 
-renderPhoto({photo: 'https://unsplash.it/300/?random', caption: 'Hello'})
+function updateGrid() {
+  var masonry = new Masonry('#photos')
+}
 
-renderPhoto({photo: 'https://unsplash.it/300/?random', caption: 'Amber, you are so talented!'})
+fetch(photoAPI + '/photos/')
 
-renderPhoto({photo: 'https://unsplash.it/300/?random', caption: 'How do you even do it?'})
+.then(function(data) {
+  return data.json()
+})
 
-renderPhoto({photo: 'https://unsplash.it/300/?random', caption: 'You are a great dog mom!'})
+.then(function(photos) {
+  console.log(photos)
+  photos.forEach(function(photoObject) {
+    renderPhoto(photoObject)
+  })
+  setTimeout(function() {
+    updateGrid()
+  }
+  ,0)
+})
 
-// fetch(photoAPI)
-//
-// .then(function(data) {
-//   return data.json()
-// })
-//
-// .then(function(photos) {
-//   photos.forEach(function(photoObject) {
-//
-//     renderPhoto(photoObject)
-//   })
-// })
-//
-// .catch(function(ex) {
-//   console.log('parsing failed', ex)
-// })
+.catch(function(ex) {
+  console.log('parsing failed', ex)
+})

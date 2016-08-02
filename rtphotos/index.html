@@ -11,17 +11,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div class="jumbotron">
-    <h1>Fakestagram</h1>
-  </div>
-  <div class="container">
-    <div class="row" id="photos"></div>
-  </div>
+  <header>
+    <div class="jumbotron">
+      <h1 class="text-center" id="heading">Fakestagram</h1>
+    </div>
+  </header>
 
+  <main>
+    <div class="container">
+      <div class="row" id="photos"></div>
+    </div>
+  </main>
+
+  <script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
   <script src="https://js.pusher.com/3.2/pusher.min.js"></script>
   <script src="js/main.js"></script>
 
