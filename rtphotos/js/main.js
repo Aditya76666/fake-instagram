@@ -1,7 +1,7 @@
 var pusher,
     channel,
     apiToken = 'da04f5af68a3ed9b77d1',
-    photoAPI = 'http://80cf5e8f.ngrok.io',
+    photoAPI = 'https://80cf5e8f.ngrok.io',
     // photoAPI = '',
 
 // Pusher connection
