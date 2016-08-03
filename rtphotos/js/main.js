@@ -53,7 +53,7 @@ fetch(photoAPI + '/photos/')
       columnWidth: '.grid-sizer'
     })
   }
-  ,1000)
+  ,2000)
 })
 
 .catch(function(ex) {
