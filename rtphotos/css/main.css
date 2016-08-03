@@ -44,6 +44,7 @@ body main #photos .grid-item img {
     border: 2px solid #066875;
     border-bottom: none;
     margin-top: 5px;
+    min-width: 274px;
 }
 
 body main #photos .grid-item .caption {
