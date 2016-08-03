@@ -23,7 +23,6 @@ function renderPhoto(photoObject) {
   div.classList.add('grid-item')
 
   var img = document.createElement('img')
-  // img.classList.add('img-thumbnail')
   img.setAttribute('src', photoObject.image_url)
   div.appendChild(img)
 
@@ -34,10 +33,6 @@ function renderPhoto(photoObject) {
 
   photos.appendChild(div)
 }
-
-// function updateGrid() {
-//   var masonry = new Masonry('#photos')
-// }
 
 fetch(photoAPI + '/photos/')
 
