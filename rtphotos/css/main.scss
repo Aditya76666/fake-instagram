@@ -4,7 +4,42 @@ header {
     }
 }
 
-img {
-    width: 100% !important;
+* { box-sizing: border-box; }
 
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 25%;
+}
+
+.grid-item img {
+  display: block;
+  width: 97%;
+}
+
+.caption {
+    width: 97%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
 }
