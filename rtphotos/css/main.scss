@@ -1,6 +1,5 @@
 $cream: #fffffb;
 $teal: rgb(6, 104, 117);
-$orange: rgb(246, 162, 20);
 $maroon: #8a2739;
 
 
@@ -23,59 +22,39 @@ header {
     }
 }
 
-main {
-    padding-top: 35px;
-    background-color: $cream;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-
-html {
-    overflow-y: scroll;
-}
-
 body {
     font-family: sans-serif;
-}
-
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.grid-sizer,
-.grid-item {
-  width: 25%;
-}
-
-.grid-item img {
-  display: block;
-  width: 97%;
-}
-
-img {
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    border: 2px solid $teal;
-    border-bottom: none;
-}
-
-.caption {
-    width: 97%;
-    padding: 10px;
-    margin-top: 0px;
-    text-align: center;
-    font-family: 'Bungee Hairline', cursive;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: rgba(6, 104, 117, 0.2);
-    color: $teal;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border: 2px solid $teal;
-    border-top: none;
+    main {
+        padding-top: 35px;
+        background-color: $cream;
+        #photos {
+            columns: 4;
+            .grid-item {
+                display: inline-block;
+                img {
+                    width: 100%;
+                    border-top-right-radius: 3px;
+                    border-top-left-radius: 3px;
+                    border: 2px solid $teal;
+                    border-bottom: none;
+                    margin-top: 5px;
+                }
+                .caption {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 0px;
+                    text-align: center;
+                    font-family: 'Bungee Hairline', cursive;
+                    font-size: 18px;
+                    font-weight: bold;
+                    background-color: rgba(6, 104, 117, 0.2);
+                    color: $teal;
+                    border-bottom-right-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    border: 2px solid $teal;
+                    border-top: none;
+                }
+            }
+        }
+    }
 }

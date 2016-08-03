@@ -13,7 +13,15 @@ pusher = new Pusher(apiToken, {
 channel = pusher.subscribe('photos')
 channel.bind('new_photo', function(data) {
 console.log(data)
+
+  // $('.grid').masonry({
+  //   itemSelector: '.grid-item',
+  //   percentPosition: true,
+  //   columnWidth: '.grid-sizer'
+  // })
+
 renderPhoto(data)
+
 })
 
 function renderPhoto(photoObject) {
@@ -46,14 +54,14 @@ fetch(photoAPI + '/photos/')
     renderPhoto(photoObject)
   })
 
-  setTimeout(function() {
-    $('.grid').masonry({
-      itemSelector: '.grid-item',
-      percentPosition: true,
-      columnWidth: '.grid-sizer'
-    })
-  }
-  ,2000)
+  // setTimeout(function() {
+  //   $('.grid').masonry({
+  //     itemSelector: '.grid-item',
+  //     percentPosition: true,
+  //     columnWidth: '.grid-sizer'
+  //   })
+  // }
+  // ,2000)
 })
 
 .catch(function(ex) {
