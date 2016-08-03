@@ -4,21 +4,13 @@ var pusher,
     // photoAPI = 'https://80cf5e8f.ngrok.io',
     photoAPI = 'https://aqueous-chamber-43940.herokuapp.com/',
 
-// Pusher connection
 pusher = new Pusher(apiToken, {
   encrypted: true
 })
 
-// Pusher channel and event subscription
 channel = pusher.subscribe('photos')
 channel.bind('new_photo', function(data) {
 console.log(data)
-
-  // $('.grid').masonry({
-  //   itemSelector: '.grid-item',
-  //   percentPosition: true,
-  //   columnWidth: '.grid-sizer'
-  // })
 
 renderPhoto(data)
 
@@ -53,15 +45,6 @@ fetch(photoAPI + '/photos/')
   photos.forEach(function(photoObject) {
     renderPhoto(photoObject)
   })
-
-  // setTimeout(function() {
-  //   $('.grid').masonry({
-  //     itemSelector: '.grid-item',
-  //     percentPosition: true,
-  //     columnWidth: '.grid-sizer'
-  //   })
-  // }
-  // ,2000)
 })
 
 .catch(function(ex) {
