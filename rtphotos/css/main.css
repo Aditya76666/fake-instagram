@@ -1,27 +1,38 @@
-header {
+body header {
     border-bottom: 5px solid #066875;
 }
 
-header .jumbotron {
+body header .jumbotron {
     background-color: #8a2739;
     color: #fffffb;
     margin-bottom: 0px;
 }
 
-header #heading {
+body header #heading {
     font-family: 'Bungee', cursive;
-    font-size: 95px;
+    font-size: 40px;
 }
 
-header #subheading {
+body header #subheading {
     font-family: 'Bungee', cursive;
-    font-size: 25px;
+    font-size: 20px;
     color: #066875;
     text-shadow: -1px 0 #fffffb, 0 1px #fffffb, 1px 0 #fffffb, 0 -1px #fffffb;
 }
 
-body {
-    font-family: sans-serif;
+@media screen and (min-width: 700px) {
+    body header #heading {
+        font-size: 75px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body header #heading {
+        font-size: 95px;
+    }
+    body header #subheading {
+        font-size: 25px;
+    }
 }
 
 body main {
@@ -30,7 +41,7 @@ body main {
 }
 
 body main #photos {
-    columns: 4;
+    columns: 1;
 }
 
 body main #photos .grid-item {
@@ -44,7 +55,6 @@ body main #photos .grid-item img {
     border: 2px solid #066875;
     border-bottom: none;
     margin-top: 5px;
-    min-width: 274px;
 }
 
 body main #photos .grid-item .caption {
@@ -61,4 +71,16 @@ body main #photos .grid-item .caption {
     border-bottom-left-radius: 3px;
     border: 2px solid #066875;
     border-top: none;
+}
+
+@media screen and (min-width: 700px) {
+    body main #photos {
+        columns: 3;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body main #photos {
+        columns: 4;
+    }
 }

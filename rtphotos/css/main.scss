@@ -2,33 +2,43 @@ $cream: #fffffb;
 $teal: rgb(6, 104, 117);
 $maroon: #8a2739;
 
-
-header {
-    border-bottom: 5px solid $teal;
-    .jumbotron {
-        background-color: $maroon;
-        color: $cream;
-        margin-bottom: 0px;
-    }
-    #heading {
-        font-family: 'Bungee', cursive;
-        font-size: 95px;
-    }
-    #subheading {
-        font-family: 'Bungee', cursive;
-        font-size: 25px;
-        color: $teal;
-        text-shadow: -1px 0 $cream, 0 1px $cream, 1px 0 $cream, 0 -1px $cream;
-    }
-}
-
 body {
-    font-family: sans-serif;
+    header {
+        border-bottom: 5px solid $teal;
+        .jumbotron {
+            background-color: $maroon;
+            color: $cream;
+            margin-bottom: 0px;
+        }
+        #heading {
+            font-family: 'Bungee', cursive;
+            font-size: 40px;
+        }
+        #subheading {
+            font-family: 'Bungee', cursive;
+            font-size: 20px;
+            color: $teal;
+            text-shadow: -1px 0 $cream, 0 1px $cream, 1px 0 $cream, 0 -1px $cream;
+        }
+        @media screen and (min-width: 700px) {
+            #heading {
+                font-size: 75px;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            #heading {
+                font-size: 95px;
+            }
+            #subheading {
+                font-size: 25px;
+            }
+        }
+    }
     main {
         padding-top: 35px;
         background-color: $cream;
         #photos {
-            columns: 4;
+            columns: 1;
             .grid-item {
                 display: inline-block;
                 img {
@@ -38,7 +48,7 @@ body {
                     border: 2px solid $teal;
                     border-bottom: none;
                     margin-top: 5px;
-                    min-width: 274px;
+                    // min-width: 274px;
                 }
                 .caption {
                     width: 100%;
@@ -55,6 +65,16 @@ body {
                     border: 2px solid $teal;
                     border-top: none;
                 }
+            }
+        }
+        @media screen and (min-width: 700px) {
+            #photos {
+                columns: 3;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            #photos {
+                columns: 4;
             }
         }
     }
