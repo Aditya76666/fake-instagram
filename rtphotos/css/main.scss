@@ -1,30 +1,51 @@
+$cream: #fffffb;
+$teal: rgb(6, 104, 117);
+$orange: rgb(246, 162, 20);
+$maroon: #8a2739;
+
+
 header {
+    border-bottom: 5px solid $teal;
+    .jumbotron {
+        background-color: $maroon;
+        color: $cream;
+        margin-bottom: 0px;
+    }
     #heading {
         font-family: 'Bungee', cursive;
+        font-size: 95px;
+    }
+    #subheading {
+        font-family: 'Bungee', cursive;
+        font-size: 25px;
+        color: $teal;
+        text-shadow: -1px 0 $cream, 0 1px $cream, 1px 0 $cream, 0 -1px $cream;
     }
 }
 
-* { box-sizing: border-box; }
-
-/* force scrollbar */
-html { overflow-y: scroll; }
-
-body { font-family: sans-serif; }
-
-/* ---- grid ---- */
-
-.grid {
-
+main {
+    padding-top: 35px;
+    background-color: $cream;
 }
 
-/* clear fix */
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: sans-serif;
+}
+
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
-
-/* ---- .grid-item ---- */
 
 .grid-sizer,
 .grid-item {
@@ -36,10 +57,25 @@ body { font-family: sans-serif; }
   width: 97%;
 }
 
+img {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border: 2px solid $teal;
+    border-bottom: none;
+}
+
 .caption {
     width: 97%;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 0px;
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(6, 104, 117, 0.2);
+    color: $teal;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 2px solid $teal;
+    border-top: none;
 }

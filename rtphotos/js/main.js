@@ -23,7 +23,7 @@ function renderPhoto(photoObject) {
   div.classList.add('grid-item')
 
   var img = document.createElement('img')
-  img.classList.add('img-thumbnail')
+  // img.classList.add('img-thumbnail')
   img.setAttribute('src', photoObject.image_url)
   div.appendChild(img)
 
@@ -58,7 +58,7 @@ fetch(photoAPI + '/photos/')
       columnWidth: '.grid-sizer'
     })
   }
-  ,500)
+  ,1000)
 })
 
 .catch(function(ex) {
