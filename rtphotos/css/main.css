@@ -1,0 +1,86 @@
+body header {
+    border-bottom: 5px solid #066875;
+}
+
+body header .jumbotron {
+    background-color: #8a2739;
+    color: #fffffb;
+    margin-bottom: 0px;
+}
+
+body header #heading {
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
+}
+
+body header #subheading {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    color: #066875;
+    text-shadow: -1px 0 #fffffb, 0 1px #fffffb, 1px 0 #fffffb, 0 -1px #fffffb;
+}
+
+@media screen and (min-width: 700px) {
+    body header #heading {
+        font-size: 75px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body header #heading {
+        font-size: 95px;
+    }
+    body header #subheading {
+        font-size: 25px;
+    }
+}
+
+body main {
+    padding-top: 35px;
+    background-color: #fffffb;
+}
+
+body main #photos {
+    columns: 1;
+}
+
+body main #photos .grid-item {
+    display: inline-block;
+}
+
+body main #photos .grid-item img {
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border: 2px solid #066875;
+    border-bottom: none;
+    margin-top: 5px;
+}
+
+body main #photos .grid-item .caption {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0px;
+    text-align: center;
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(6, 104, 117, 0.2);
+    color: #066875;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 2px solid #066875;
+    border-top: none;
+}
+
+@media screen and (min-width: 700px) {
+    body main #photos {
+        columns: 3;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body main #photos {
+        columns: 4;
+    }
+}
